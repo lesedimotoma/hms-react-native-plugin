@@ -16,7 +16,8 @@
 
 import { number, bool, exact, string, oneOfType, arrayOf } from 'prop-types';
 import React, { Component } from 'react';
-import { findNodeHandle, requireNativeComponent, UIManager, ViewPropTypes } from 'react-native';
+import { findNodeHandle, requireNativeComponent, UIManager } from 'react-native';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 
 class HMSTileOverlayView extends Component {
   constructor() {
