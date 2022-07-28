@@ -15,7 +15,8 @@
 */
 
 import React, { Component } from "react";
-import { requireNativeComponent, ViewPropTypes, View } from "react-native";
+import { requireNativeComponent, View } from "react-native";
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 
 class HMSInfoWindowView extends Component {
   constructor() {

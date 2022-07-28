@@ -20,8 +20,8 @@ import {
   findNodeHandle,
   requireNativeComponent,
   UIManager,
-  ViewPropTypes,
 } from "react-native";
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 
 class HMSMarkerView extends Component {
   constructor() {

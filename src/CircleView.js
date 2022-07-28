@@ -16,7 +16,8 @@
 
 import { exact, oneOf, number, arrayOf, bool, func, oneOfType } from "prop-types";
 import React, { Component } from "react";
-import { requireNativeComponent, ViewPropTypes } from "react-native";
+import { requireNativeComponent } from "react-native";
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 import { PatternItemTypes } from "./constants";
 
 class HMSCircleView extends Component {

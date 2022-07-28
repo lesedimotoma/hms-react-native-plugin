@@ -34,6 +34,7 @@
     "react-native": ">=0.60.0 <1.0.x"
   },
   "devDependencies": {
+    "deprecated-react-native-prop-types": "^2.3.0",
     "react": "16.6.0",
     "react-native": "0.60.0",
     "eslint": "^7.2.0",
