@@ -36,6 +36,7 @@ import com.huawei.hms.ads.AudioFocusType;
 import com.huawei.hms.ads.splash.SplashAdDisplayListener;
 import com.huawei.hms.ads.splash.SplashView;
 
+import com.huawei.hms.rn.ads.utils.CommonUtils;
 import com.huawei.hms.rn.ads.utils.ReactUtils;
 
 import static com.huawei.hms.rn.ads.HMSAdsSplashAdModule.Event;
@@ -143,16 +144,16 @@ public class HMSAdsSplashActivity extends ReactActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         Intent intent = getIntent();
-        mOrientation = intent.getIntExtra("orientation", ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        mSloganResId = intent.getIntExtra("sloganResId", R.drawable.default_slogan);
-        mLogoResId = intent.getIntExtra("logoResId", R.drawable.ic_launcher);
-        mWideSloganResId = intent.getIntExtra("wideSloganResId", R.drawable.default_slogan);
-        mMediaNameResId = intent.getIntExtra("mediaNameResId", 2131493009);
-        mAudioFocusType = intent.getIntExtra("audioFocusType", AudioFocusType.NOT_GAIN_AUDIO_FOCUS_WHEN_MUTE);
-        mLogoText = intent.getStringExtra("logoText");
-        mCopyrightText = intent.getStringExtra("copyrightText");
-        mAdId = intent.getStringExtra("adId");
-        mAdParamBundle = intent.getBundleExtra("adParam");
+        mOrientation = CommonUtils.getIntegerExtra(intent,"orientation", ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        mSloganResId = CommonUtils.getIntegerExtra(intent, "sloganResId", R.drawable.default_slogan);
+        mLogoResId = CommonUtils.getIntegerExtra(intent, "logoResId", R.drawable.ic_launcher);
+        mWideSloganResId = CommonUtils.getIntegerExtra(intent, "wideSloganResId", R.drawable.default_slogan);
+        mMediaNameResId = CommonUtils.getIntegerExtra(intent, "mediaNameResId", 2131493009);
+        mAudioFocusType = CommonUtils.getIntegerExtra(intent, "audioFocusType", AudioFocusType.NOT_GAIN_AUDIO_FOCUS_WHEN_MUTE);
+        mLogoText = CommonUtils.getStringExtra(intent, "logoText");
+        mCopyrightText = CommonUtils.getStringExtra(intent,"copyrightText");
+        mAdId = CommonUtils.getStringExtra(intent,"adId");
+        mAdParamBundle = CommonUtils.getBundleExtra(intent,"adParam");
         loadAd();
     }
 
